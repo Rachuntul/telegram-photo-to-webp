@@ -27,7 +27,7 @@ A lightweight and efficient Telegram bot designed to automatically convert image
 
 ### 1. Clone the Repository
 ```bash
-git clone [https://github.com/Rachuntul/telegram-photo-to-webp.git](https://github.com/Rachuntul/telegram-photo-to-webp.git)
+git clone https://github.com/Rachuntul/telegram-photo-to-webp.git](https://github.com/Rachuntul/telegram-photo-to-webp.git
 cd telegram-photo-to-webp
 
 ```
@@ -77,10 +77,6 @@ python3 converter.py
 1. Open a chat with your bot on Telegram.
 2. Send an image as a **"Photo"**.
 3. The bot will automatically reply with the **.webp** version as a document.
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://www.google.com/search?q=https://github.com/Rachuntul/telegram-photo-to-webp/issues).
 
 ## 📝 License
 
