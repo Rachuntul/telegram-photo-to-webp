@@ -26,7 +26,8 @@ async def convert_to_webp(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     await update.message.reply_text("Processing your photo to WebP... 🔄")
 
-try:
+    # SEKARANG TRY SUDAH MASUK KE DALAM FUNGSI (ADA INDENTASI)
+    try:
         await photo.download_to_drive(input_path)
         
         with Image.open(input_path) as img:
@@ -36,6 +37,7 @@ try:
                 ratio = max_width / float(img.width)
                 new_height = int(float(img.height) * float(ratio))
                 img = img.resize((max_width, new_height), Image.LANCZOS)
+            
             img.save(output_path, "WEBP", quality=75)
         
         with open(output_path, 'rb') as webp_file:
