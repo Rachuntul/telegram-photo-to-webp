@@ -54,7 +54,7 @@ async def convert_to_webp(update: Update, context: ContextTypes.DEFAULT_TYPE):
         if os.path.exists(output_path): os.remove(output_path)
 
 if __name__ == '__main__':
-    app = ApplicationBuilder().token(TOKEN).read_timeout(30),CONNECT_TIMEOUT(30).build()
+    app = ApplicationBuilder().token(TOKEN).read_timeout(30).connect_timeout(30).build()
     app.add_handler(MessageHandler(filters.PHOTO, convert_to_webp))
     print("Bot is running... Press Ctrl+C to stop.")
     app.run_polling()
