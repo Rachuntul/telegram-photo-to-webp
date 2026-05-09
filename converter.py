@@ -26,7 +26,6 @@ async def convert_to_webp(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     await update.message.reply_text("Processing your photo to WebP... 🔄")
 
-    # SEKARANG TRY SUDAH MASUK KE DALAM FUNGSI (ADA INDENTASI)
     try:
         await photo.download_to_drive(input_path)
         
@@ -43,8 +42,8 @@ async def convert_to_webp(update: Update, context: ContextTypes.DEFAULT_TYPE):
         with open(output_path, 'rb') as webp_file:
             await update.message.reply_document(
                 document=webp_file, 
-                filename="hasil_foto.webp",
-                caption="Ini versi webp buat portofolio kamu!",
+                filename="Result.webp",
+                caption="DONE!!",
                 disable_content_type_detection=True
             )
             
