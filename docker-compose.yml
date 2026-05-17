@@ -5,5 +5,6 @@ services:
     restart: unless-stopped
     env_file:
       - .env
+    # Utilize RAM Disk (tmpfs) for high-speed I/O operations
     tmpfs:
       - /app/temp_images

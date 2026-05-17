@@ -1,9 +1,8 @@
-# Use lightweight Python image
 FROM python:3.11-slim
 
 WORKDIR /app
 
-# Install dependensi sistem untuk Pillow, OpenCV, dan LibreOffice (untuk PDF/Docs)
+# Install system dependencies (Pillow, OpenCV, and LibreOffice for document conversion)
 RUN apt-get update && apt-get install -y \
     libopenjp2-7 \
     libtiff6 \
@@ -17,7 +16,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-# Pastikan folder temp_images selalu ada sebelum bot berjalan
+# Create directory for temporary processing
 RUN mkdir -p temp_images
 
 CMD ["python", "converter.py"]
