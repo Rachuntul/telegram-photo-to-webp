@@ -129,9 +129,6 @@ If this project helps you, you can support development here:
  <a href="https://saweria.co/RACHUNTUL">
    <img src="https://img.shields.io/badge/Donate-Saweria-orange?style=for-the-badge&logo=buymeacoffee&logoColor=white" />
  </a>
- <a href="https://buymeacoffee.com/dionpuji120">
-   <img src="https://img.shields.io/badge/buy_me_a_coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" />
- </a>
 
 ---
 
