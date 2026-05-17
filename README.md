@@ -1,87 +1,111 @@
-# 📸 Telegram Photo-to-WebP Converter Bot
+<div align="center">
+  <h1>Telegram Premium Multi-Converter Bot</h1>
+  <p>A powerful, lightweight, and Docker-optimized Telegram bot for image processing and document generation.</p>
 
-![Python](https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python&logoColor=white)
-![Telegram](https://img.shields.io/badge/Telegram-Bot%20API-blue?style=for-the-badge&logo=telegram&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+  [![Python](https://img.shields.io/badge/Python-3.11-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+  [![Telegram API](https://img.shields.io/badge/Telegram_Bot_API-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://core.telegram.org/bots/api)
+  [![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
+  [![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
 
-A lightweight and efficient Telegram bot designed to automatically convert images (JPG/PNG) into the **WebP** format. Perfect for photographers and web developers looking to optimize image assets without losing quality.
+  <br />
 
----
-
-## 🌟 Key Features
-- **⚡ Instant Conversion**: Send any photo and receive a `.webp` document immediately.
-- **🖼️ Web-Optimized**: Uses `Pillow` to balance high visual quality with significant file size reduction.
-- **🧹 Auto-Cleanup**: Temporary processing files are deleted instantly to save server space.
-- **🔒 Privacy First**: Zero permanent storage. Your images are yours alone.
-- **🤖 Smart Rendering**: Bypasses Telegram's auto-sticker rendering by sending as a raw document.
-
-## 🛠️ Tech Stack
-- **Core:** Python 3.x
-- **API:** [python-telegram-bot](https://github.com/python-telegram-bot/python-telegram-bot)
-- **Image Engine:** [Pillow (PIL)](https://python-pillow.org/)
-- **Environment:** `python-dotenv` for secure configuration.
+  [Features](#key-features) •
+  [Installation](#quick-start-guide) •
+  [Usage](#usage) •
+  [Support & Donate](#support--donate) •
+  [Contact](#connect-with-me)
+</div>
 
 ---
 
-## 🚀 Quick Start Guide
+## Key Features
+
+*Click on each feature to expand details:*
+
+<details>
+<summary><b>Format Conversion</b></summary>
+<br>
+Convert images seamlessly to WebP (auto-compressed <100KB), PNG, and JPG while maintaining visual quality. Ideal for web optimization.
+</details>
+
+<details>
+<summary><b>Document Generation</b></summary>
+<br>
+Convert images directly to PDF, Word (DOCX), and Excel (XLSX) utilizing LibreOffice headless mode operating natively within the Docker container.
+</details>
+
+<details>
+<summary><b>Aesthetic Filters</b></summary>
+<br>
+Apply professional color grading such as Fujifilm Chrome, Teal & Orange, Leica Monochrome, Cyberpunk Neon, Pencil Sketch, and Vintage Sepia via matrix manipulation.
+</details>
+
+<details>
+<summary><b>Upscaling Resolution</b></summary>
+<br>
+Upscale image resolution up to 2x using advanced Lanczos resampling for crisp details without pixelation.
+</details>
+
+<details>
+<summary><b>RAM Disk Optimization</b></summary>
+<br>
+Leverages Docker `tmpfs` to process files directly in memory. Bypasses slow disk I/O bottlenecks entirely, ensuring instant processing even on slower external storage.
+</details>
+
+## Tech Stack
+
+* **Core**: Python 3.11
+* **API Framework**: `python-telegram-bot`
+* **Image Processing**: Pillow (PIL), NumPy
+* **Document Engine**: LibreOffice (Headless)
+* **Deployment**: Docker & Docker Compose
+
+---
+
+## Quick Start Guide
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/Rachuntul/telegram-photo-to-webp.git](https://github.com/Rachuntul/telegram-photo-to-webp.git
+git clone [github.com/Rachuntul/telegram-photo-to-webp.git](https://github.com/Rachuntul/telegram-photo-to-webp.git)
 cd telegram-photo-to-webp
-
 ```
 
-### 2. Set Up Virtual Environment
+### 2. Configuration
 
-```bash
-python3 -m venv venv
-source venv/bin/activate
-
+Create your environment variable file by copying the example:
+```Bash
+cp .env.example .env
 ```
 
-### 3. Install Dependencies
-
-```bash
-pip install -r requirements.txt
-
+Edit .env and assign your bot token from @BotFather:
+Plaintext
+```Bash
+BOT_TOKEN=your_telegram_bot_token_here
 ```
 
-### 4. Configuration
+### 3. Launch via Docker
 
-Create a `.env` file in the root directory:
-
-```bash
-touch .env
-
+This project is configured to run inside an isolated Docker container with a RAM Disk setup for maximum performance.
+```Bash
+docker compose up -d --build
 ```
 
-Add your bot token from [@BotFather](https://t.me/botfather) inside the `.env` file:
+Usage
 
-```text
-BOT_TOKEN=your_token_here
+    Start a chat with your bot on Telegram.
 
-```
+    Send an image using the Photo attachment option.
 
-### 5. Launch the Bot
+    The bot will present an interactive inline menu.
 
-```bash
-python3 converter.py
+    Select your preferred format, document type, filter, or upscale action.
 
-```
+    The processed file will be returned instantly as an uncompressed document.
 
----
+Support & Donate
 
-## 📸 Usage
+If you find this project helpful and want to support, you can support me through the link below:
+Connect with Me
+License
 
-1. Open a chat with your bot on Telegram.
-2. Send an image as a **"Photo"**.
-3. The bot will automatically reply with the **.webp** version as a document.
-
-## 📝 License
-
-Distributed under the **MIT License**. See `LICENSE` for more information.
-
----
-
-*Developed by [Dion Puji Ramdani*](https://www.google.com/search?q=https://github.com/Rachuntul)
+Distributed under the MIT License. See LICENSE for more information.
