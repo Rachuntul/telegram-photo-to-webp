@@ -1,8 +1,6 @@
-# Telegram Premium Multi-Converter Bot
-
 <div align="center">
 
- <h1>Telegram Premium Multi-Converter Bot</h1>
+ <h1>Telegram Multi-Converter Bot</h1>
  <p>A powerful, lightweight, and Docker-optimized Telegram bot for image processing and document generation.</p>
 
  <a href="https://www.python.org/">
@@ -20,14 +18,6 @@
  <a href="LICENSE">
    <img src="https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge" />
  </a>
-
- <br /><br />
-
- <a href="#key-features">Features</a>
- <a href="#usage">Usage</a>
- <a href="#connect-with-me">Contact</a>
-
- <br /><br />
 
  <a href="https://t.me/BotFather">
    <img src="https://img.shields.io/badge/Create_Bot-@BotFather-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" />
@@ -137,7 +127,7 @@ docker compose up -d --build
 If this project helps you, you can support development here:
 
 <p align="center">
- <a href="https://saweria.co/USERNAME_KAMU">
+ <a href="https://saweria.co/RACHUNTUL">
    <img src="https://img.shields.io/badge/Donate-Saweria-orange?style=for-the-badge&logo=buymeacoffee&logoColor=white" />
  </a>
 </p>
@@ -148,12 +138,8 @@ If this project helps you, you can support development here:
 
 <p align="center">
 
- <a href="https://instagram.com/USERNAME_INSTAGRAM">
-   <img src="https://img.shields.io/badge/Instagram-@USERNAME_INSTAGRAM-E4405F?style=for-the-badge&logo=instagram&logoColor=white" />
- </a>
-
- <a href="https://t.me/USERNAME_TELEGRAM">
-   <img src="https://img.shields.io/badge/Telegram-@USERNAME_TELEGRAM-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" />
+ <a href="https://instagram.com/dionimbus">
+   <img src="https://img.shields.io/badge/Instagram-@dionimbus-E4405F?style=for-the-badge&logo=instagram&logoColor=white" />
  </a>
 
 </p>
