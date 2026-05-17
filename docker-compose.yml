@@ -2,8 +2,8 @@ services:
   bot-converter:
     build: .
     container_name: dion_converter_bot
-    restart: always
+    restart: unless-stopped
     env_file:
       - .env
-    volumes:
-      - ./temp_images:/app/temp_images
+    tmpfs:
+      - /app/temp_images
